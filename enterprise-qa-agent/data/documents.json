@@ -1,0 +1,34 @@
+[
+  {
+    "id": "D01",
+    "title": "员工费用报销期限制度（合成）",
+    "version_date": "2026-09-01",
+    "chunks": [
+      {"id": "C01", "text": "员工应在费用发生后30天内提交报销申请。", "claim_key": "reimbursement_deadline", "claim_value": "30天", "scope": "全体员工"}
+    ]
+  },
+  {
+    "id": "D03",
+    "title": "国内差旅住宿标准（合成）",
+    "version_date": "2026-08-15",
+    "chunks": [
+      {"id": "C01", "text": "国内差旅住宿费用标准为每人每天300元。", "claim_key": "hotel_daily_limit", "claim_value": "300元", "scope": "国内差旅"}
+    ]
+  },
+  {
+    "id": "D04",
+    "title": "远程办公申请规定（合成）",
+    "version_date": "2026-09-10",
+    "chunks": [
+      {"id": "C01", "text": "员工每周最多可申请2天远程办公，须提前取得直属主管批准。", "claim_key": "remote_days_per_week", "claim_value": "2天", "scope": "全体员工"}
+    ]
+  },
+  {
+    "id": "P01",
+    "title": "演示视频编辑器产品说明（合成）",
+    "version_date": "2026-10-01",
+    "chunks": [
+      {"id": "C01", "text": "演示视频编辑器支持添加字幕，并支持最高1080p视频导出。", "claim_key": "export_resolution", "claim_value": "1080p", "scope": "演示产品"}
+    ]
+  }
+]

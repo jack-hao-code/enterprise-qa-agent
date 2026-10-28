@@ -1,0 +1,151 @@
+{
+  "generated_at": "2026-10-28T03:33:42.554085+00:00",
+  "python": "3.9.6",
+  "backend": "mock",
+  "model": "offline-rule-mock-v1",
+  "evidence_level": "offline_flow_only",
+  "note": "通过表示满足本脚本的断言，不能证明所有问题均正确；mock 不验证真实模型决策。",
+  "duration_seconds": 0.006602,
+  "passed": 10,
+  "total": 10,
+  "cases": [
+    {
+      "case_id": "normal",
+      "passed": true,
+      "expected_status": "answered",
+      "actual_status": "answered",
+      "errors": [],
+      "steps": 3,
+      "result_file": "normal.json",
+      "actions": [
+        "search_documents",
+        "read_document",
+        "finish"
+      ]
+    },
+    {
+      "case_id": "conflict",
+      "passed": true,
+      "expected_status": "needs_clarification",
+      "actual_status": "needs_clarification",
+      "errors": [],
+      "steps": 4,
+      "result_file": "conflict.json",
+      "actions": [
+        "search_documents",
+        "read_document",
+        "read_document",
+        "finish"
+      ]
+    },
+    {
+      "case_id": "out_of_scope",
+      "passed": true,
+      "expected_status": "no_answer",
+      "actual_status": "no_answer",
+      "errors": [],
+      "steps": 3,
+      "result_file": "out_of_scope.json",
+      "actions": [
+        "search_documents",
+        "search_documents",
+        "finish"
+      ]
+    },
+    {
+      "case_id": "paraphrase",
+      "passed": true,
+      "expected_status": "answered",
+      "actual_status": "answered",
+      "errors": [],
+      "steps": 4,
+      "result_file": "paraphrase.json",
+      "actions": [
+        "search_documents",
+        "search_documents",
+        "read_document",
+        "finish"
+      ]
+    },
+    {
+      "case_id": "followup",
+      "passed": true,
+      "expected_status": "answered",
+      "actual_status": "answered",
+      "errors": [],
+      "steps": 3,
+      "result_file": "followup.json",
+      "actions": [
+        "search_documents",
+        "read_document",
+        "finish"
+      ]
+    },
+    {
+      "case_id": "tool_failure",
+      "passed": true,
+      "expected_status": "tool_error",
+      "actual_status": "tool_error",
+      "errors": [],
+      "steps": 4,
+      "result_file": "tool_failure.json",
+      "actions": [
+        "search_documents",
+        "read_document",
+        "read_document",
+        "finish"
+      ]
+    },
+    {
+      "case_id": "transient_recovery",
+      "passed": true,
+      "expected_status": "answered",
+      "actual_status": "answered",
+      "errors": [],
+      "steps": 4,
+      "result_file": "transient_recovery.json",
+      "actions": [
+        "search_documents",
+        "read_document",
+        "read_document",
+        "finish"
+      ]
+    },
+    {
+      "case_id": "missing_question",
+      "passed": true,
+      "expected_status": "needs_clarification",
+      "actual_status": "needs_clarification",
+      "errors": [],
+      "steps": 0,
+      "result_file": "missing_question.json",
+      "actions": []
+    },
+    {
+      "case_id": "step_limit",
+      "passed": true,
+      "expected_status": "incomplete",
+      "actual_status": "incomplete",
+      "errors": [],
+      "steps": 1,
+      "result_file": "step_limit.json",
+      "actions": [
+        "search_documents"
+      ]
+    },
+    {
+      "case_id": "changed_source",
+      "passed": true,
+      "expected_status": "answered",
+      "actual_status": "answered",
+      "errors": [],
+      "steps": 3,
+      "result_file": "changed_source.json",
+      "actions": [
+        "search_documents",
+        "read_document",
+        "finish"
+      ]
+    }
+  ]
+}

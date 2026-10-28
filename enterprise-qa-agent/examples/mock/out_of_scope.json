@@ -1,0 +1,75 @@
+{
+  "run_id": "387a81feeb9642fa9c9fd51a944d7f2e",
+  "started_at": "2026-10-28T03:33:42.550006+00:00",
+  "backend": "mock",
+  "model": "offline-rule-mock-v1",
+  "evidence_level": "offline_flow_only",
+  "dataset_sha256": "4bed3a9f03dc1e5a54e3e6fde146ee63a89bb7a3b5b185905a2e8b782e962bcd",
+  "request": {
+    "question": "火星殖民计划是什么？"
+  },
+  "status": "no_answer",
+  "answer": "当前检索尚无足够依据回答，请补充相关资料。",
+  "citations": [],
+  "gaps": [
+    "需要补充相关制度或产品文档。"
+  ],
+  "clarification_question": "",
+  "steps": 3,
+  "max_steps": 10,
+  "trace": [
+    {
+      "step": 1,
+      "action": "search_documents",
+      "arguments": {
+        "query": "火星殖民计划是什么？",
+        "limit": 10
+      },
+      "reason": "先定位问题对应的制度候选",
+      "observation": {
+        "ok": true,
+        "query": "火星殖民计划是什么？",
+        "hits": [],
+        "total_hits": 0,
+        "truncated": false
+      },
+      "next_action": "search_documents"
+    },
+    {
+      "step": 2,
+      "action": "search_documents",
+      "arguments": {
+        "query": "火星殖民计划",
+        "limit": 10
+      },
+      "reason": "首轮检索无结果，换一种表述补查",
+      "observation": {
+        "ok": true,
+        "query": "火星殖民计划",
+        "hits": [],
+        "total_hits": 0,
+        "truncated": false
+      },
+      "next_action": "finish"
+    },
+    {
+      "step": 3,
+      "action": "finish",
+      "arguments": {
+        "status": "no_answer",
+        "answer": "当前资料中未找到支持此问题的制度或产品依据。",
+        "citations": [],
+        "gaps": [
+          "需要补充相关制度或产品文档。"
+        ],
+        "clarification_question": ""
+      },
+      "reason": "根据已观察到的原文或资料缺口提交结果",
+      "observation": {
+        "ok": true,
+        "accepted": true
+      },
+      "next_action": "end:no_answer"
+    }
+  ]
+}

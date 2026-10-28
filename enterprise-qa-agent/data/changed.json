@@ -1,0 +1,5 @@
+[
+  {"id": "D01", "title": "员工费用报销期限制度（合成修改实验）", "version_date": "2026-09-01", "chunks": [
+    {"id": "C01", "text": "员工应在费用发生后45天内提交报销申请。", "claim_key": "reimbursement_deadline", "claim_value": "45天", "scope": "全体员工"}
+  ]}
+]

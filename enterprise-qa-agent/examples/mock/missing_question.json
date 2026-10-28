@@ -1,0 +1,21 @@
+{
+  "run_id": "d9fe21bbdc7d475fa62742765ff6b812",
+  "started_at": "2026-10-28T03:33:42.553026+00:00",
+  "backend": "mock",
+  "model": "offline-rule-mock-v1",
+  "evidence_level": "offline_flow_only",
+  "dataset_sha256": "4bed3a9f03dc1e5a54e3e6fde146ee63a89bb7a3b5b185905a2e8b782e962bcd",
+  "request": {
+    "question": ""
+  },
+  "status": "needs_clarification",
+  "answer": "请先提供需要查询的问题。",
+  "citations": [],
+  "gaps": [
+    "缺少问题"
+  ],
+  "clarification_question": "你想查询哪项制度或产品信息？",
+  "steps": 0,
+  "max_steps": 10,
+  "trace": []
+}

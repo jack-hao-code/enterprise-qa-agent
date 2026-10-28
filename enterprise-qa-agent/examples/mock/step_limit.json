@@ -1,0 +1,46 @@
+{
+  "run_id": "84c4e2c92d2e448d87aa7e6dccf0d707",
+  "started_at": "2026-10-28T03:33:42.553272+00:00",
+  "backend": "mock",
+  "model": "offline-rule-mock-v1",
+  "evidence_level": "offline_flow_only",
+  "dataset_sha256": "4bed3a9f03dc1e5a54e3e6fde146ee63a89bb7a3b5b185905a2e8b782e962bcd",
+  "request": {
+    "question": "报销期限多久？"
+  },
+  "status": "incomplete",
+  "answer": "已达到执行步数上限，任务未完成。",
+  "citations": [],
+  "gaps": [
+    "需要补充资料、修正无效动作或在可控范围内增加步数后重新执行。"
+  ],
+  "clarification_question": "",
+  "steps": 1,
+  "max_steps": 1,
+  "trace": [
+    {
+      "step": 1,
+      "action": "search_documents",
+      "arguments": {
+        "query": "报销期限多久？",
+        "limit": 10
+      },
+      "reason": "先定位问题对应的制度候选",
+      "observation": {
+        "ok": true,
+        "query": "报销期限多久？",
+        "hits": [
+          {
+            "document_id": "D01",
+            "title": "员工费用报销期限制度（合成）",
+            "version_date": "2026-09-01",
+            "score": 11.2749
+          }
+        ],
+        "total_hits": 1,
+        "truncated": false
+      },
+      "next_action": "end:incomplete"
+    }
+  ]
+}

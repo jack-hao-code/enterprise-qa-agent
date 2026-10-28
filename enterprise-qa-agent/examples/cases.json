@@ -1,0 +1,12 @@
+[
+  {"id": "normal", "input": "normal", "data": "documents", "expected_status": "answered", "answer_contains": ["30天"], "citation_ids": ["D01"]},
+  {"id": "conflict", "input": "conflict", "data": "conflict", "expected_status": "needs_clarification", "answer_contains": ["30天", "15天"], "citation_ids": ["D01", "D02"], "min_reads": 2},
+  {"id": "out_of_scope", "input": "out_of_scope", "data": "documents", "expected_status": "no_answer", "citation_ids": [], "min_searches": 2},
+  {"id": "paraphrase", "input": "paraphrase", "data": "documents", "expected_status": "answered", "answer_contains": ["30天"], "citation_ids": ["D01"]},
+  {"id": "followup", "input": "followup", "data": "documents", "expected_status": "answered", "answer_contains": ["30天"], "citation_ids": ["D01"]},
+  {"id": "tool_failure", "input": "normal", "data": "documents", "fail_tools": {"read_document": 99}, "expected_status": "tool_error", "citation_ids": [], "must_observe_error": true},
+  {"id": "transient_recovery", "input": "normal", "data": "documents", "fail_tools": {"read_document": 1}, "expected_status": "answered", "answer_contains": ["30天"], "citation_ids": ["D01"], "must_observe_error": true},
+  {"id": "missing_question", "input": "missing_question", "data": "documents", "expected_status": "needs_clarification", "citation_ids": []},
+  {"id": "step_limit", "input": "normal", "data": "documents", "max_steps": 1, "expected_status": "incomplete", "citation_ids": []},
+  {"id": "changed_source", "input": "normal", "data": "changed", "expected_status": "answered", "answer_contains": ["45天"], "answer_excludes": ["30天"], "citation_ids": ["D01"]}
+]

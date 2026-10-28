@@ -1,0 +1,99 @@
+{
+  "run_id": "bc543e79306f406ab43f0f96969fb7d7",
+  "started_at": "2026-10-28T03:33:42.551840+00:00",
+  "backend": "mock",
+  "model": "offline-rule-mock-v1",
+  "evidence_level": "offline_flow_only",
+  "dataset_sha256": "4bed3a9f03dc1e5a54e3e6fde146ee63a89bb7a3b5b185905a2e8b782e962bcd",
+  "request": {
+    "question": "报销期限多久？"
+  },
+  "status": "tool_error",
+  "answer": "工具返回错误，任务未完成。",
+  "citations": [],
+  "gaps": [
+    "资料读取或检索失败，需恢复工具后重试。"
+  ],
+  "clarification_question": "",
+  "steps": 4,
+  "max_steps": 10,
+  "trace": [
+    {
+      "step": 1,
+      "action": "search_documents",
+      "arguments": {
+        "query": "报销期限多久？",
+        "limit": 10
+      },
+      "reason": "先定位问题对应的制度候选",
+      "observation": {
+        "ok": true,
+        "query": "报销期限多久？",
+        "hits": [
+          {
+            "document_id": "D01",
+            "title": "员工费用报销期限制度（合成）",
+            "version_date": "2026-09-01",
+            "score": 11.2749
+          }
+        ],
+        "total_hits": 1,
+        "truncated": false
+      },
+      "next_action": "read_document"
+    },
+    {
+      "step": 2,
+      "action": "read_document",
+      "arguments": {
+        "document_id": "D01"
+      },
+      "reason": "读取候选原文以核对事实及潜在冲突",
+      "observation": {
+        "ok": false,
+        "error": {
+          "code": "INJECTED_TOOL_FAILURE",
+          "message": "模拟工具暂时不可用",
+          "retryable": true
+        }
+      },
+      "next_action": "read_document"
+    },
+    {
+      "step": 3,
+      "action": "read_document",
+      "arguments": {
+        "document_id": "D01"
+      },
+      "reason": "观察到暂时性工具错误，再尝试一次且保留此前成功结果",
+      "observation": {
+        "ok": false,
+        "error": {
+          "code": "INJECTED_TOOL_FAILURE",
+          "message": "模拟工具暂时不可用",
+          "retryable": true
+        }
+      },
+      "next_action": "finish"
+    },
+    {
+      "step": 4,
+      "action": "finish",
+      "arguments": {
+        "status": "tool_error",
+        "answer": "工具未能完成，无法可靠回答。",
+        "citations": [],
+        "gaps": [
+          "资料读取或检索失败，需恢复工具后重试。"
+        ],
+        "clarification_question": ""
+      },
+      "reason": "根据已观察到的原文或资料缺口提交结果",
+      "observation": {
+        "ok": true,
+        "accepted": true
+      },
+      "next_action": "end:tool_error"
+    }
+  ]
+}

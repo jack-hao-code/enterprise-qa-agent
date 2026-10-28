@@ -1,0 +1,45 @@
+$ PYTHONPATH=src python3 -m unittest discover -s tests -v
+test_bad_tool_arguments_are_observations_not_crashes (test_agent.AgentTests) ... ok
+test_changed_source_changes_answer (test_agent.AgentTests) ... ok
+test_conflict_cannot_be_overridden_by_later_date (test_agent.AgentTests) ... ok
+test_conflict_citations_must_show_the_conflicting_values (test_agent.AgentTests) ... ok
+test_conflict_is_cited_and_requires_confirmation (test_agent.AgentTests) ... ok
+test_empty_question_asks_for_input_without_model_call (test_agent.AgentTests) ... ok
+test_followup_resolves_topic_from_history_but_rereads_source (test_agent.AgentTests) ... ok
+test_model_failure_is_explicit_and_has_no_mock_fallback (test_agent.AgentTests) ... ok
+test_no_answer_does_not_render_unsupported_model_claim (test_agent.AgentTests) ... ok
+test_normal_answer_is_grounded (test_agent.AgentTests) ... ok
+test_out_of_scope_has_gap_not_invented_answer (test_agent.AgentTests) ... ok
+test_paraphrase_rewrites_search_after_empty_observation (test_agent.AgentTests) ... ok
+test_partial_numeric_quote_cannot_change_source_meaning (test_agent.AgentTests) ... ok
+test_persistent_failure_is_not_success (test_agent.AgentTests) ... ok
+test_request_history_cannot_inject_system_role (test_agent.AgentTests) ... ok
+test_same_query_with_larger_limit_resolves_prior_truncation (test_agent.AgentTests) ... ok
+test_step_limit_returns_incomplete (test_agent.AgentTests) ... ok
+test_transient_failure_is_observed_then_retried_by_backend (test_agent.AgentTests) ... ok
+test_unhashable_model_tool_name_is_a_structured_error (test_agent.AgentTests) ... ok
+test_unknown_tool_cannot_execute (test_agent.AgentTests) ... ok
+test_unread_conflicting_search_hit_blocks_answer (test_agent.AgentTests) ... ok
+test_unread_or_fabricated_citation_cannot_pass (test_agent.AgentTests) ... ok
+test_unrelated_search_cannot_clear_prior_truncation (test_agent.AgentTests) ... ok
+test_chinese_query_finds_reimbursement (test_agent.StoreTests) ... ok
+test_duplicate_ids_rejected (test_agent.StoreTests) ... ok
+test_read_contains_original_and_version (test_agent.StoreTests) ... ok
+test_unknown_document_is_structured_failure (test_agent.StoreTests) ... ok
+test_unrelated_query_has_no_results (test_agent.StoreTests) ... ok
+test_invalid_json_exits_two (test_cli.CliTests) ... ok
+test_json_output_and_saved_file_agree (test_cli.CliTests) ... ok
+test_missing_live_configuration_exits_two (test_cli.CliTests) ... ok
+test_persistent_failure_exits_one_and_saves_result (test_cli.CliTests) ... ok
+test_external_plain_http_is_rejected (test_live_protocol.LiveProtocolTests) ... ok
+test_http_error_does_not_expose_provider_body (test_live_protocol.LiveProtocolTests) ... ok
+test_local_model_can_use_http_without_api_key (test_live_protocol.LiveProtocolTests) ... ok
+test_missing_or_parallel_calls_are_rejected (test_live_protocol.LiveProtocolTests) ... ok
+test_request_and_tool_response_serialization (test_live_protocol.LiveProtocolTests) ... ok
+
+----------------------------------------------------------------------
+Ran 37 tests in 0.637s
+
+OK
+
+exit_code=0
